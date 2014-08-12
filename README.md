@@ -55,8 +55,7 @@ En pentaho, al poner/seleccionar una ruta para acceder a cualquiera de los archi
   En vez de:  /home/manager/projects/data-integration/bbdd_export/bbdd_access/ALMACEN FO.mdb
   Usar:       bbdd_access/ALMACEN FO.mdb
 
-### Definir variables
-En el fichero "~/.kettle/kettle.properties"
+### Definir variables, en el fichero "~/.kettle/kettle.properties"
     O sea, hacer:
      1. cd $Home
      2. cd .kettle
