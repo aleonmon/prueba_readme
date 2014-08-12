@@ -75,10 +75,10 @@ no hará falta actualizar las rutas. En nuestro caso:
 
 #### En el directorio del data-integration (donde esta spoon.sh), ir al fichero "../simple-jndi/jdbc.properties" y añadir:
 
-<b> bbdd_fibra/type=javax.sql.DataSource </b>
-<b> bbdd_fibra/driver=org.hsqldb.jdbcDriver </b>
-<b> bbdd_fibra/url=jdbc:oracle:thin:@172.16.10.77:1521/xe </b>
-<b> bbdd_fibra/user=system </b>
-<b> bbdd_fibra/password=Mobilife2014 </b>
+<b> bbdd_fibra/type=javax.sql.DataSource </b> <br>
+<b> bbdd_fibra/driver=org.hsqldb.jdbcDriver </b> <br>
+<b> bbdd_fibra/url=jdbc:oracle:thin:@172.16.10.77:1521/xe </b> <br>
+<b> bbdd_fibra/user=system </b> <br>
+<b> bbdd_fibra/password=Mobilife2014 </b> <br>
 
 * En este repositorio se ha añadido en la carpeta 'config_files' un ejemplo de fichero 'jdbc.properties'.
