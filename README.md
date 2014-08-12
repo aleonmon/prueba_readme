@@ -67,8 +67,8 @@ En pentaho, al poner/seleccionar una ruta para acceder a cualquiera de los archi
       * Se pueden usar estas variables en todos los campos donde aparezca un icono pequeño con forma rombo y con el signo dolar '$' dentro.
       * Se pueden definir variables para almacenar paths de directorios y archivos.
       * Para comprobar que las variables se han creado correctamente y pentaho las usa, ir a la transformación o trabajo correspondiente y teclear F2, a continuación se abrirá una ventana donde se muestran todas las variables que esta usando pentaho.
+    * En este repositorio se ha añadido en la carpeta 'config_files' un ejemplo de fichero 'kettle.properties'.
   * Otra de las ventajas es que si queremos cambiar de esquema, hacemos ESQUEMA_BBDD_FIBRA = nuevo_nombre_del_esquema, y para crear las tablas en el nuevo esquema solo hay que darle click al botón con forma de hoja de pergamino y un play verde pequeño, que al poner el ratón encima indica "Generar el SQL necesario para ejecutar esta transformación", a continuación se abre un dialogo, por ultimo dar click a "Execute SQL".      
-  * En este repositorio se ha añadido en la carpeta 'config_files' un ejemplo de fichero 'kettle.properties'.
 
 ### Añadir al fichero los datos de conexión:
 
