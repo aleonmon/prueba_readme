@@ -4,11 +4,17 @@ En este fichero encontraras las indicaciones necesarias para poder trabajar en e
 
 ### Directorios:
 
- * db_fibra/varios/
- * db_fibra/varios/files_to_import
+ * bbdd_fibraoptica/varios/
+ * bbdd_fibraoptica/varios/files_to_import
+ * bbdd_fibraoptica/varios/sample_config_files
 
 
-##### En db_fibra/varios se encuentran las tansformaciones:
+##### En bbdd_fibraoptica/varios/sample_config_files se encuentran los ejemplos de ficheros de configuración:
+* jdbc.properties
+* kettle.properties
+
+
+##### En bbdd_fibraoptica/varios se encuentran las tansformaciones:
 
 * all_tables.ktr
 * access_export_ALMACEN FO.ktr
@@ -21,7 +27,7 @@ En este fichero encontraras las indicaciones necesarias para poder trabajar en e
 * access_export_Reparaciones.ktr
 
 
-##### En db_fibra/varios/files_to_import se encuentran los ficheros .mdb (access):
+##### En bbdd_fibraoptica/varios/files_to_import se encuentran los ficheros .mdb (access):
 
 * ALMACEN FO.mdb
 * Asignaciones de fibras.mdb
