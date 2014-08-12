@@ -9,11 +9,6 @@ En este fichero encontraras las indicaciones necesarias para poder trabajar en e
  * bbdd_fibraoptica/varios/sample_config_files
 
 
-##### En bbdd_fibraoptica/varios/sample_config_files se encuentran los ejemplos de ficheros de configuración:
-* jdbc.properties
-* kettle.properties
-
-
 ##### En bbdd_fibraoptica/varios se encuentran las tansformaciones:
 
 * all_tables.ktr
@@ -50,14 +45,18 @@ En este fichero encontraras las indicaciones necesarias para poder trabajar en e
 * access_export_Peticiones_TC.ktr ===================> Peticiones_TC.mdb
 * access_export_Reparaciones.ktr ====================> Reparaciones.mdb
 
-En pentaho, al poner/seleccionar una ruta para acceder a cualquiera de los archivos mdb, hay que usar rutas relativas, no rutas absolutas,
-de esta manera si la carpeta del data-integration cambia de lugar, o si se quieren ejecutar las transformaciones desde otro ordenador, 
-no hará falta actualizar las rutas. En nuestro caso:
-  Cambiar:
 
-  Por:
 
-### En el fichero "~/.kettle/kettle.properties"
+##### En bbdd_fibraoptica/varios/sample_config_files se encuentran los ejemplos de ficheros de configuración:
+* jdbc.properties
+* kettle.properties
+
+En pentaho, al poner/seleccionar una ruta para acceder a cualquiera de los archivos mdb, hay que usar rutas relativas, no rutas absolutas,de esta manera si la carpeta del data-integration cambia de lugar, o si se quieren ejecutar las transformaciones desde otro ordenador, no hará falta actualizar las rutas. Por ejempplo:
+  En vez de:  /home/manager/projects/data-integration/bbdd_export/bbdd_access/ALMACEN FO.mdb
+  Usar:       bbdd_access/ALMACEN FO.mdb
+
+### Definir variables
+En el fichero "~/.kettle/kettle.properties"
     O sea, hacer:
      1. cd $Home
      2. cd .kettle
@@ -73,7 +72,7 @@ no hará falta actualizar las rutas. En nuestro caso:
 
 ### Añadir al fichero los datos de conexión:
 
-#### En el directorio del data-integration (donde esta spoon.sh), ir al fichero "../simple-jndi/jdbc.properties" y añadir:
+En el directorio del data-integration (donde esta spoon.sh), ir al fichero "../simple-jndi/jdbc.properties" y añadir:
 
 <b> bbdd_fibra/type=javax.sql.DataSource </b> <br>
 <b> bbdd_fibra/driver=org.hsqldb.jdbcDriver </b> <br>
