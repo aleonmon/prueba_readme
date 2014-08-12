@@ -63,11 +63,11 @@ En pentaho, al poner/seleccionar una ruta para acceder a cualquiera de los archi
         * Definir las variables que se necesiten. Para este proyecto definir: ESQUEMA_BBDD_FIBRA = nombre_del_esquema
         * Donde nombre_del_esquema es el nombre del esquema que existe en la base de datos "oracle_pruebas".
         * Un caso concreto sería por ejemplo: ESQUEMA_BBDD_FIBRA = redmine_jesus
-  * La definición de variables en este fichero, nos permitirá usarlas en Pentaho así: ${ESQUEMA_BBDD_FIBRA}
-  * Se pueden usar estas variables en todos los campos donde aparezca un icono pequeño con forma rombo y con el signo dolar '$' dentro.
-  * Se pueden definir variables para almacenar paths de directorios y archivos.
-  * Para comprobar que las variables se han creado correctamente y pentaho las usa, ir a la transformación o trabajo correspondiente y teclear F2, a continuación se abrirá una ventana donde se muestran todas las variables que esta usando pentaho.
-  * En este repositorio se ha añadido en la carpeta 'config_files' un ejemplo de fichero 'kettle.properties'.
+        * La definición de variables en este fichero, nos permitirá usarlas en Pentaho así: ${ESQUEMA_BBDD_FIBRA}
+      * Se pueden usar estas variables en todos los campos donde aparezca un icono pequeño con forma rombo y con el signo dolar '$' dentro.
+      * Se pueden definir variables para almacenar paths de directorios y archivos.
+      * Para comprobar que las variables se han creado correctamente y pentaho las usa, ir a la transformación o trabajo correspondiente y teclear F2, a continuación se abrirá una ventana donde se muestran todas las variables que esta usando pentaho.
+      * En este repositorio se ha añadido en la carpeta 'config_files' un ejemplo de fichero 'kettle.properties'.
 
 ### Añadir al fichero los datos de conexión:
 
