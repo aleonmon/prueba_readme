@@ -14,7 +14,7 @@ En principio todas las transformaciones (ficheros .ktr) estan configurados con l
 #### Tener en cuenta en Pentaho:
    - Si el directorio donde se encuentran los archivos .ktr (transformacion) y .jtr (trabajo) está fuera del directorio de pentaho, entonces habrá que hacer un drag and drop (arrastra y suelta) hasta la ventana de pentaho, esto es debido a que pentaho no muestra los directorios que estan fuera del suyo.
    - Para descargar los ficheros access (.mdb) hay que acceder con el correspondiente usuario y contraseña a:
-      - [nas1.local/mobilife/CLIENTES/Ericsson/PROYECTOS/BBDD%20Mantenimiento%20Red%20FO/Doc.Cliente/ADIF%20_%20Access]
+      - nas1.local/mobilife/CLIENTES/Ericsson/PROYECTOS/BBDD%20Mantenimiento%20Red%20FO/Doc.Cliente/ADIF%20_%20Access
 
 #### Directorios:
 
