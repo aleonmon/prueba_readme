@@ -17,11 +17,11 @@ En principio todas las transformaciones (ficheros .ktr) estan configurados con l
 
 ### Directorios:
 
-##### En bbdd_fibraoptica/varios se encuentran las tansformaciones.
+* En bbdd_fibraoptica/varios se encuentran las tansformaciones.
 
-##### En bbdd_fibraoptica/varios/files_to_import se encuentran los ficheros .mdb (access):
+* En bbdd_fibraoptica/varios/files_to_import se encuentran los ficheros .mdb (access):
 
-##### En bbdd_fibraoptica/varios/config_files se encuentran los ejemplos de ficheros de configuración:
+* En bbdd_fibraoptica/varios/config_files se encuentran los ejemplos de ficheros de configuración:
 
 
 ### Correspondencia entre transformaciones y ficheros mdb
