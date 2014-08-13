@@ -10,8 +10,8 @@ En principio todas las transformaciones (ficheros .ktr) estan configurados con l
   1. En el directorio de pentaho (data-integration, donde esta spoon.sh), crear un acceso directo a la carpeta 'files_to_import' del repositorio.
   2. Sustituir el fichero "~/.kettle/kettle.properties" por un enlace simbólico al fichero "kettle.properties" de la carpeta 'config_files' del repositorio.
 
-* Tener en cuenta:
-   * Si el directorio donde se encuentran los archivos .ktr (transformacion) y .jtr (trabajo) está fuera del directorio de pentaho, entonces habrá que hacer un drag and drop (arrastra y suelta) hasta la ventana de pentaho, esto es debido a que pentaho no muestra los directorios que estan fuera del suyo.
+* Tener en cuenta en Pentaho:
+   - Si el directorio donde se encuentran los archivos .ktr (transformacion) y .jtr (trabajo) está fuera del directorio de pentaho, entonces habrá que hacer un drag and drop (arrastra y suelta) hasta la ventana de pentaho, esto es debido a que pentaho no muestra los directorios que estan fuera del suyo.
 
 ## Notas
 
@@ -35,22 +35,11 @@ En principio todas las transformaciones (ficheros .ktr) estan configurados con l
 * access_export_Peticiones_TC.ktr ===================> Peticiones_TC.mdb
 * access_export_Reparaciones.ktr ====================> Reparaciones.mdb
 
-* LA SIGUIENTE OPCIÓN PARA LA CONEXIÓN A LA BBDD SE HA DESCARTADO POR SER INESTABLE: 
-
-Añadir al fichero los datos de conexión:
-
-En el directorio de pentaho (data-integration, donde esta spoon.sh), ir al fichero "../simple-jndi/jdbc.properties" y añadir:
-
- bbdd_fibra/type=javax.sql.DataSource  <br>
- bbdd_fibra/driver=org.hsqldb.jdbcDriver  <br>
- bbdd_fibra/url=jdbc:oracle:thin:@172.16.10.77:1521/xe  <br>
- bbdd_fibra/user=USUARIO  <br>
- bbdd_fibra/password=CONTRASEÑA  <br>
-
-* En este repositorio se ha añadido en la carpeta 'config_files' un ejemplo de fichero 'jdbc.properties'.
+* El uso del fichero "../simple-jndi/jdbc.properties" hasido descartado por la inestabilidad de la conexión.
+* En este repositorio se ha añadido en la carpeta 'config_files' un ejemplo de fichero 'jdbc.properties' por si a caso.
 
 
-#### Definir variables, en el fichero "~/.kettle/kettle.properties"
+#### Definir variables en el fichero "~/.kettle/kettle.properties"
 
      1. cd $Home
      2. cd .kettle
