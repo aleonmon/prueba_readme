@@ -39,7 +39,7 @@ En principio todas las transformaciones (ficheros .ktr) estan configurados con l
 * En este repositorio se ha añadido en la carpeta 'config_files' un ejemplo de fichero 'jdbc.properties' por si a caso.
 
 
-#### Definir variables en el fichero "~/.kettle/kettle.properties"
+### Definir variables en el fichero "~/.kettle/kettle.properties"
 
      1. cd $Home
      2. cd .kettle
@@ -54,7 +54,7 @@ En principio todas las transformaciones (ficheros .ktr) estan configurados con l
   * Otra de las ventajas es que si queremos cambiar de esquema, hacemos ESQUEMA_BBDD_FIBRA = nuevo_nombre_del_esquema, y para crear las tablas en el nuevo esquema solo hay que darle click al botón con forma de hoja de pergamino y un play verde pequeño, que al poner el ratón encima indica "Generar el SQL necesario para ejecutar esta transformación", a continuación se abre una ventana, dar click a "Execute SQL" y si ha habido éxito cerrar ventana.
 
 
-#### Definición de variables para los paths de los ficheros mdb
+### Definición de variables para los paths de los ficheros mdb
 * En pentaho, al poner/seleccionar una ruta para acceder a cualquiera de los archivos mdb, hay que usar rutas relativas, no rutas absolutas,de esta manera si la carpeta del data-integration cambia de lugar, o si se quieren ejecutar las transformaciones desde otro ordenador, no hará falta actualizar las rutas. Por ejemplo:
   * En vez de:  /home/manager/projects/data-integration/bbdd_export/bbdd_access/ALMACEN FO.mdb
   * Usar:       bbdd_access/ALMACEN FO.mdb
