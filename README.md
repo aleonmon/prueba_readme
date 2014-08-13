@@ -59,9 +59,8 @@ En principio todas las transformaciones (ficheros .ktr) estan configurados con l
      1. cd $Home
      2. cd .kettle
      3. Abrir con un editor de texto el archivo "kettle.properties"
-        * Definir las variables que se necesiten. Para este proyecto definir: ESQUEMA_BBDD_FIBRA = nombre_del_esquema
-        * Donde nombre_del_esquema es el nombre del esquema que existe en la base de datos "oracle_pruebas".
-        * Un caso concreto sería por ejemplo: ESQUEMA_BBDD_FIBRA = redmine_jesus
+        * Definir las variables que se necesiten. En los apartados correspondientes de este documento se indican que variables hay que definir.
+        * Para este proyecto s epodría definir por ejemplo: ESQUEMA_BBDD_FIBRA = nombre_del_esquema. Donde nombre_del_esquema es el nombre del esquema que existe en la base de datos "oracle_pruebas".
   * La definición de variables en este fichero, nos permitirá usarlas en Pentaho así: ${ESQUEMA_BBDD_FIBRA}
   * Se pueden usar estas variables en todos los campos donde aparezca un icono pequeño con forma rombo y con el signo dolar '$' dentro.
   * Se pueden definir variables para almacenar paths de directorios y archivos.
@@ -93,7 +92,29 @@ En el fichero de configuración "kettle.properties" añadir las siguientes varia
  <b> BBDD_FIBRA_TYPE        = ORACLE         </b> <br/>
  <b> BBDD_FIBRA_ACCESS      = Native         </b> <br/>
 
-###### ESTA OPCIÓN SE HA DESCARTADO POR SER INESTABLE: Añadir al fichero los datos de conexión:
+
+## Definición de variables para los paths de los ficheros mdb
+* En pentaho, al poner/seleccionar una ruta para acceder a cualquiera de los archivos mdb, hay que usar rutas relativas, no rutas absolutas,de esta manera si la carpeta del data-integration cambia de lugar, o si se quieren ejecutar las transformaciones desde otro ordenador, no hará falta actualizar las rutas. Por ejemplo:
+  * En vez de:  /home/manager/projects/data-integration/bbdd_export/bbdd_access/ALMACEN FO.mdb
+  * Usar:       bbdd_access/ALMACEN FO.mdb
+* Para facilitar más esta cuestión mejor definir en el fichero de configuración "kettle.properties" las variables para los paths:
+<br/>
+
+<b> BBDD_FIBRA_IMPORT_PETICIONES    = files_to_import/Peticiones_Datos.mdb             </b> <br/>
+<b> BBDD_FIBRA_IMPORT_PETICIONES_TC = files_to_import/Peticiones_TC.mdb                </b> <br/>
+<b> BBDD_FIBRA_IMPORT_ALMACENES     = files_to_import/ALMACEN FO.mdb                   </b> <br/>
+<b> BBDD_FIBRA_IMPORT_ASIGNACIONES  = files_to_import/Asignaciones de fibras.mdb       </b> <br/>
+<b> BBDD_FIBRA_IMPORT_AVERIAS       = files_to_import/AveriasFO.mdb                    </b> <br/>
+<b> BBDD_FIBRA_IMPORT_CONSUMOS      = files_to_import/Consumos de materiales de FO.mdb </b> <br/>
+<b> BBDD_FIBRA_IMPORT_FACTURAS      = files_to_import/Facturas de FO.mdb               </b> <br/>
+<b> BBDD_FIBRA_IMPORT_REPARACIONES  = files_to_import/Reparaciones.mdb                 </b> <br/>
+
+
+## Notas
+
+* Si el directorio donde se encuentran los archivos .ktr (transformacion) y .jtr (trabajo) está fuera del directorio de pentaho, entonces habrá que hacer un drag and drop (arrastra y suelta) hasta la ventana de pentaho, esto es debido a que pentaho no muestra los directorios que estan fuera del suyo.
+
+* ESTA OPCIÓN SE HA DESCARTADO POR SER INESTABLE: Añadir al fichero los datos de conexión:
 
 En el directorio de pentaho (data-integration, donde esta spoon.sh), ir al fichero "../simple-jndi/jdbc.properties" y añadir:
 
@@ -104,10 +125,3 @@ En el directorio de pentaho (data-integration, donde esta spoon.sh), ir al fiche
  bbdd_fibra/password=CONTRASEÑA  <br>
 
 * En este repositorio se ha añadido en la carpeta 'config_files' un ejemplo de fichero 'jdbc.properties'.
-
-## Notas
-* En pentaho, al poner/seleccionar una ruta para acceder a cualquiera de los archivos mdb, hay que usar rutas relativas, no rutas absolutas,de esta manera si la carpeta del data-integration cambia de lugar, o si se quieren ejecutar las transformaciones desde otro ordenador, no hará falta actualizar las rutas. Por ejemplo:
-  * En vez de:  /home/manager/projects/data-integration/bbdd_export/bbdd_access/ALMACEN FO.mdb
-  * Usar:       bbdd_access/ALMACEN FO.mdb
-* Para facilitar más esta cuestión mejor usar variables para los paths.
-* Si el directorio donde se encuentran los archivos .ktr (transformacion) y .jtr (trabajo) está fuera del directorio de pentaho, entonces habrá que hacer un drag and drop (arrastra y suelta) hasta la ventana de pentaho, esto es debido a que pentaho no muestra los directorios que estan fuera del suyo.
