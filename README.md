@@ -54,7 +54,7 @@ En este fichero encontraras las indicaciones necesarias para poder trabajar en e
 
 En principio todas las transformaciones (ficheros .ktr) estan configurados con lo necesario, lo único que tiene que hacer alguien que va a trabajar por primera vez con este repositorio, es definir las variables necesarias que se usan en las transformaciones y situar el directorio del repositorio en algun directorio en concreto (más abajo se indica como hacerlo).
 
-### Definir variables, en el fichero "~/.kettle/kettle.properties"
+#### Definir variables, en el fichero "~/.kettle/kettle.properties"
 
      1. cd $Home
      2. cd .kettle
@@ -71,7 +71,7 @@ En principio todas las transformaciones (ficheros .ktr) estan configurados con l
 
 
 
-### Situar el directorio del repositorio
+#### Situar el directorio del repositorio
 
 * Para poder usar los ficheros de configuración hay dos alternativas:
  1. Llevar el repositorio dentro del directorio de pentaho (carpeta data-integration, donde esta spoon.sh).
