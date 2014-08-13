@@ -27,7 +27,7 @@ En este fichero encontraras las indicaciones necesarias para poder trabajar en e
 * ALMACEN FO.mdb
 * Asignaciones de fibras.mdb
 * AveriasFO.mdb
-* AveriasFO_Backup.mdb
+* AveriasFO_Backup.mdb    (no necesario)
 * Consumos de materiales de FO.mdb
 * Facturas de FO.mdb
 * Peticiones_Datos.mdb
@@ -35,7 +35,7 @@ En este fichero encontraras las indicaciones necesarias para poder trabajar en e
 * Reparaciones.mdb
 
 ##### En bbdd_fibraoptica/varios/config_files se encuentran los ejemplos de ficheros de configuración:
-* jdbc.properties
+* jdbc.properties (no necesario)
 * kettle.properties
 
 ### Correspondencia entre transformaciones y ficheros mdb
@@ -78,11 +78,11 @@ En principio todas las transformaciones (ficheros .ktr) estan configurados con l
   2. Llevar el repositorio fuera del directorio de pentaho:
     1. En el directorio de pentaho, crear un acceso directo a la carpeta 'files_to_import'.
 * En cualquiera de los casos anteriores:
-  1. Llevar el ficero "kettle.properties" a la carpeta 'config_files' del repositorio y hacer que "~/.kettle/kettle.properties" sea un enlace simbolico al nuevo path.
+  1. Llevar el fichero "kettle.properties" a la carpeta 'config_files' del repositorio y hacer que "~/.kettle/kettle.properties" sea un enlace simbolico al nuevo path de "kettle.properties".
   
 
 ### CONEXIÓN A LA BBDD FIBRA
-En el fichero de configuracion "kettle.properties" añadir las siguientes variables: 
+En el fichero de configuración "kettle.properties" añadir las siguientes variables: 
 <br/>
  <b> BBDD_FIBRA_HOST_NAME   = 172.16.10.80   </b> <br/>
  <b> BBDD_FIBRA_DB_NAME     = xe             </b> <br/>
