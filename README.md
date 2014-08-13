@@ -80,7 +80,7 @@ En principio todas las transformaciones (ficheros .ktr) estan configurados con l
   1. Llevar el fichero "kettle.properties" a la carpeta 'config_files' del repositorio y hacer que "~/.kettle/kettle.properties" sea un enlace simbolico al nuevo path de "kettle.properties".
   
 
-### CONEXIÓN A LA BBDD FIBRA
+#### Definición de variables para la conexión de la BBDD
 En el fichero de configuración "kettle.properties" añadir las siguientes variables: 
 <br/>
  <b> BBDD_FIBRA_HOST_NAME   = 172.16.10.80   </b> <br/>
@@ -93,7 +93,7 @@ En el fichero de configuración "kettle.properties" añadir las siguientes varia
  <b> BBDD_FIBRA_ACCESS      = Native         </b> <br/>
 
 
-## Definición de variables para los paths de los ficheros mdb
+#### Definición de variables para los paths de los ficheros mdb
 * En pentaho, al poner/seleccionar una ruta para acceder a cualquiera de los archivos mdb, hay que usar rutas relativas, no rutas absolutas,de esta manera si la carpeta del data-integration cambia de lugar, o si se quieren ejecutar las transformaciones desde otro ordenador, no hará falta actualizar las rutas. Por ejemplo:
   * En vez de:  /home/manager/projects/data-integration/bbdd_export/bbdd_access/ALMACEN FO.mdb
   * Usar:       bbdd_access/ALMACEN FO.mdb
