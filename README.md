@@ -114,7 +114,9 @@ En el fichero de configuración "kettle.properties" añadir las siguientes varia
 
 * Si el directorio donde se encuentran los archivos .ktr (transformacion) y .jtr (trabajo) está fuera del directorio de pentaho, entonces habrá que hacer un drag and drop (arrastra y suelta) hasta la ventana de pentaho, esto es debido a que pentaho no muestra los directorios que estan fuera del suyo.
 
-* ESTA OPCIÓN SE HA DESCARTADO POR SER INESTABLE: Añadir al fichero los datos de conexión:
+* LA SIGUIENTE OPCIÓN PARA LA CONEXIÓN A LA BBDD SE HA DESCARTADO POR SER INESTABLE: 
+
+Añadir al fichero los datos de conexión:
 
 En el directorio de pentaho (data-integration, donde esta spoon.sh), ir al fichero "../simple-jndi/jdbc.properties" y añadir:
 
