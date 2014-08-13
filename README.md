@@ -34,6 +34,10 @@ En este fichero encontraras las indicaciones necesarias para poder trabajar en e
 * Peticiones_TC.mdb
 * Reparaciones.mdb
 
+##### En bbdd_fibraoptica/varios/sample_config_files se encuentran los ejemplos de ficheros de configuración:
+* jdbc.properties
+* kettle.properties
+
 ### Correspondencia entre transformaciones y ficheros mdb
 
 * access_export_ALMACEN FO.ktr ======================> ALMACEN FO.mdb
@@ -49,10 +53,6 @@ En este fichero encontraras las indicaciones necesarias para poder trabajar en e
 ### Configuración
 
 En principio todas las transformaciones (ficheros .ktr) estan configurados con lo necesario, lo único que tiene que hacer alguien que va a trabajar por primera vez con este repositorio, es definir las variables necesarias que se usan en las transformaciones y situar el directorio del repositorio en algun directorio en concreto (más abajo se indica como hacerlo).
-
-##### En bbdd_fibraoptica/varios/sample_config_files se encuentran los ejemplos de ficheros de configuración:
-* jdbc.properties
-* kettle.properties
 
 ### Definir variables, en el fichero "~/.kettle/kettle.properties"
 
