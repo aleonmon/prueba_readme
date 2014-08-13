@@ -13,6 +13,8 @@ En principio todas las transformaciones (ficheros .ktr) estan configurados con l
 ## Notas
 #### Tener en cuenta en Pentaho:
    - Si el directorio donde se encuentran los archivos .ktr (transformacion) y .jtr (trabajo) está fuera del directorio de pentaho, entonces habrá que hacer un drag and drop (arrastra y suelta) hasta la ventana de pentaho, esto es debido a que pentaho no muestra los directorios que estan fuera del suyo.
+   - Para descargar los ficheros access (.mdb) hay que acceder con el correspondiente usuario y contraseña a:
+      - [nas1.local/mobilife/CLIENTES/Ericsson/PROYECTOS/BBDD%20Mantenimiento%20Red%20FO/Doc.Cliente/ADIF%20_%20Access]
 
 #### Directorios:
 
@@ -33,9 +35,6 @@ En principio todas las transformaciones (ficheros .ktr) estan configurados con l
 * access_export_Peticiones_Datos.ktr ================> Peticiones_Datos.mdb
 * access_export_Peticiones_TC.ktr ===================> Peticiones_TC.mdb
 * access_export_Reparaciones.ktr ====================> Reparaciones.mdb
-
-* El uso del fichero "../simple-jndi/jdbc.properties" hasido descartado por la inestabilidad de la conexión.
-* En este repositorio se ha añadido en la carpeta 'config_files' un ejemplo de fichero 'jdbc.properties' por si a caso.
 
 
 #### Definir variables en el fichero "~/.kettle/kettle.properties"
@@ -58,3 +57,7 @@ En principio todas las transformaciones (ficheros .ktr) estan configurados con l
   * En vez de:  /home/manager/projects/data-integration/bbdd_export/bbdd_access/ALMACEN FO.mdb
   * Usar:       bbdd_access/ALMACEN FO.mdb
 * Para facilitar más esta cuestión mejor definir en el fichero de configuración "kettle.properties" las variables para los paths.
+
+
+* El uso del fichero "../simple-jndi/jdbc.properties" hasido descartado por la inestabilidad de la conexión.
+* En este repositorio se ha añadido en la carpeta 'config_files' un ejemplo de fichero 'jdbc.properties' por si a caso.
