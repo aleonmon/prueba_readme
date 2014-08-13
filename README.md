@@ -10,10 +10,9 @@ En principio todas las transformaciones (ficheros .ktr) estan configurados con l
   1. En el directorio de pentaho (data-integration, donde esta spoon.sh), crear un acceso directo a la carpeta 'files_to_import' del repositorio.
   2. Sustituir el fichero "~/.kettle/kettle.properties" por un enlace simbólico al fichero "kettle.properties" de la carpeta 'config_files' del repositorio.
 
+## Notas
 * Tener en cuenta en Pentaho:
    - Si el directorio donde se encuentran los archivos .ktr (transformacion) y .jtr (trabajo) está fuera del directorio de pentaho, entonces habrá que hacer un drag and drop (arrastra y suelta) hasta la ventana de pentaho, esto es debido a que pentaho no muestra los directorios que estan fuera del suyo.
-
-## Notas
 
 ### Directorios:
 
