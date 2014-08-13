@@ -6,7 +6,7 @@ En este fichero encontraras las indicaciones necesarias para poder trabajar en e
 
  * bbdd_fibraoptica/varios/
  * bbdd_fibraoptica/varios/files_to_import
- * bbdd_fibraoptica/varios/sample_config_files
+ * bbdd_fibraoptica/varios/config_files
 
 
 ##### En bbdd_fibraoptica/varios se encuentran las tansformaciones:
@@ -34,7 +34,7 @@ En este fichero encontraras las indicaciones necesarias para poder trabajar en e
 * Peticiones_TC.mdb
 * Reparaciones.mdb
 
-##### En bbdd_fibraoptica/varios/sample_config_files se encuentran los ejemplos de ficheros de configuración:
+##### En bbdd_fibraoptica/varios/config_files se encuentran los ejemplos de ficheros de configuración:
 * jdbc.properties
 * kettle.properties
 
@@ -66,7 +66,7 @@ En principio todas las transformaciones (ficheros .ktr) estan configurados con l
   * Se pueden usar estas variables en todos los campos donde aparezca un icono pequeño con forma rombo y con el signo dolar '$' dentro.
   * Se pueden definir variables para almacenar paths de directorios y archivos.
   * Para comprobar que las variables se han creado correctamente y pentaho las usa, ir a la transformación o trabajo correspondiente y teclear F2, a continuación se abrirá una ventana donde se muestran todas las variables definidas que esta usando pentaho.
-  * En este repositorio se ha añadido en la carpeta 'sample_config_files' un ejemplo de fichero 'kettle.properties'.
+  * En este repositorio se ha añadido en la carpeta 'config_files' un ejemplo de fichero 'kettle.properties'.
   * Otra de las ventajas es que si queremos cambiar de esquema, hacemos ESQUEMA_BBDD_FIBRA = nuevo_nombre_del_esquema, y para crear las tablas en el nuevo esquema solo hay que darle click al botón con forma de hoja de pergamino y un play verde pequeño, que al poner el ratón encima indica "Generar el SQL necesario para ejecutar esta transformación", a continuación se abre una ventana, dar click a "Execute SQL" y si ha habido éxito cerrar ventana.
 
 
@@ -74,20 +74,24 @@ En principio todas las transformaciones (ficheros .ktr) estan configurados con l
 #### Situar el directorio del repositorio
 
 * Para poder usar los ficheros de configuración hay dos alternativas:
- 1. Llevar el repositorio dentro del directorio de pentaho (carpeta data-integration, donde esta spoon.sh).
- 2. En el directorio de pentaho, crear un acceso directo a la carpeta 'files_to_import'.
-  * Si el directorio donde se encuentran los archivos .ktr (transformacion) y .jtr (trabajo) está fuera del directorio de pentaho, entonces habrá que hacer un drag and drop (arrastra y suelta) hasta la ventana de pentaho, esto es debido a que pentaho no muestra los directorios que estan fuera del suyo.
+  1. Llevar el repositorio dentro del directorio de pentaho (carpeta data-integration, donde esta spoon.sh).
+  2. Llevar el repositorio fuera del directorio de pentaho:
+    1. En el directorio de pentaho, crear un acceso directo a la carpeta 'files_to_import'.
+* En cualquiera de los casos anteriores:
+  1. Llevar el ficero "kettle.properties" a la carpeta 'config_files' del repositorio y hacer que "~/.kettle/kettle.properties" sea un enlace simbolico al nuevo path.
+  
 
 ### CONEXIÓN A LA BBDD FIBRA
-En el fichero de configuracion "kettle.properties" añadir las siguientes variables:
- <b> BBDD_FIBRA_HOST_NAME   = 172.16.10.80   </b>
- <b> BBDD_FIBRA_DB_NAME     = xe             </b>
- <b> BBDD_FIBRA_PORT_NUMBER = 1521           </b>
- <b> BBDD_FIBRA_USER_NAME   = redmine_andres </b>
- <b> BBDD_FIBRA_PASSWORD    = Mobilife2014   </b>
- <b> BBDD_FIBRA_SCHEMA      = redmine_andres </b>
- <b> BBDD_FIBRA_TYPE        = ORACLE         </b>
- <b> BBDD_FIBRA_ACCESS      = Native         </b>
+En el fichero de configuracion "kettle.properties" añadir las siguientes variables: 
+<br/>
+ <b> BBDD_FIBRA_HOST_NAME   = 172.16.10.80   </b> <br/>
+ <b> BBDD_FIBRA_DB_NAME     = xe             </b> <br/>
+ <b> BBDD_FIBRA_PORT_NUMBER = 1521           </b> <br/>
+ <b> BBDD_FIBRA_USER_NAME   = usuario_real   </b> <br/>
+ <b> BBDD_FIBRA_PASSWORD    = contraseña_real</b> <br/>
+ <b> BBDD_FIBRA_SCHEMA      = redmine_andres </b> <br/>
+ <b> BBDD_FIBRA_TYPE        = ORACLE         </b> <br/>
+ <b> BBDD_FIBRA_ACCESS      = Native         </b> <br/>
 
 ###### ESTA OPCIÓN SE HA DESCARTADO POR SER INESTABLE: Añadir al fichero los datos de conexión:
 
@@ -99,10 +103,11 @@ En el directorio de pentaho (data-integration, donde esta spoon.sh), ir al fiche
  bbdd_fibra/user=USUARIO  <br>
  bbdd_fibra/password=CONTRASEÑA  <br>
 
-* En este repositorio se ha añadido en la carpeta 'sample_config_files' un ejemplo de fichero 'jdbc.properties'.
+* En este repositorio se ha añadido en la carpeta 'config_files' un ejemplo de fichero 'jdbc.properties'.
 
 ## Notas
-En pentaho, al poner/seleccionar una ruta para acceder a cualquiera de los archivos mdb, hay que usar rutas relativas, no rutas absolutas,de esta manera si la carpeta del data-integration cambia de lugar, o si se quieren ejecutar las transformaciones desde otro ordenador, no hará falta actualizar las rutas. Por ejempplo:
-  En vez de:  /home/manager/projects/data-integration/bbdd_export/bbdd_access/ALMACEN FO.mdb
-  Usar:       bbdd_access/ALMACEN FO.mdb
-Para facilitar más esta cuestión mejor usar variables para los paths.
+* En pentaho, al poner/seleccionar una ruta para acceder a cualquiera de los archivos mdb, hay que usar rutas relativas, no rutas absolutas,de esta manera si la carpeta del data-integration cambia de lugar, o si se quieren ejecutar las transformaciones desde otro ordenador, no hará falta actualizar las rutas. Por ejemplo:
+  * En vez de:  /home/manager/projects/data-integration/bbdd_export/bbdd_access/ALMACEN FO.mdb
+  * Usar:       bbdd_access/ALMACEN FO.mdb
+* Para facilitar más esta cuestión mejor usar variables para los paths.
+* Si el directorio donde se encuentran los archivos .ktr (transformacion) y .jtr (trabajo) está fuera del directorio de pentaho, entonces habrá que hacer un drag and drop (arrastra y suelta) hasta la ventana de pentaho, esto es debido a que pentaho no muestra los directorios que estan fuera del suyo.
