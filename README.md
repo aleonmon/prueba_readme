@@ -2,14 +2,13 @@
 
 ### Configuración
 
-En principio todas las transformaciones (ficheros .ktr) estan configurados con lo necesario, lo único que tiene que hacer alguien que va a trabajar por primera vez con este repositorio, es definir las variables necesarias que se usan en las transformaciones y situar el directorio del repositorio en algun directorio en concreto (más abajo se indica como hacerlo).
+En principio todas las transformaciones (ficheros .ktr) estan configurados con lo necesario, lo único que tiene que hacer alguien que va a trabajar por primera vez con este repositorio, es tener en cuenta los pasos a seguir.
 
 
 #### Pasos a seguir
 
-* Llevar el repositorio fuera del directorio de pentaho:
-    1. En el directorio de pentaho, crear un acceso directo a la carpeta 'files_to_import'.
-    2. Sustituir el fichero "~/.kettle/kettle.properties" por un enlace simbólico al fichero "kettle.properties" de la carpeta 'config_files' del repositorio.
+  1. En el directorio de pentaho (data-integration, donde esta spoon.sh), crear un acceso directo a la carpeta 'files_to_import' del repositorio.
+  2. Sustituir el fichero "~/.kettle/kettle.properties" por un enlace simbólico al fichero "kettle.properties" de la carpeta 'config_files' del repositorio.
 
 * Tener en cuenta:
    * Si el directorio donde se encuentran los archivos .ktr (transformacion) y .jtr (trabajo) está fuera del directorio de pentaho, entonces habrá que hacer un drag and drop (arrastra y suelta) hasta la ventana de pentaho, esto es debido a que pentaho no muestra los directorios que estan fuera del suyo.
