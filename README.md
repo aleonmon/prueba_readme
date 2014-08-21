@@ -13,14 +13,14 @@ En principio todas las transformaciones (ficheros .ktr) estan configurados con l
 ## Notas
 #### Tener en cuenta en Pentaho:
    - Si el directorio donde se encuentran los archivos .ktr (transformacion) y .jtr (trabajo) está fuera del directorio de pentaho, entonces habrá que hacer un drag and drop (arrastra y suelta) hasta la ventana de pentaho, esto es debido a que pentaho no muestra los directorios que estan fuera del suyo.
-   - Para descargar los ficheros access (.mdb) hay que acceder con el correspondiente usuario y contraseña a:
+   - Para descargar los ficheros a importar (.mdb, .csv, etc) hay que acceder con el correspondiente usuario y contraseña a:
       - nas1.local/mobilife/CLIENTES/Ericsson/PROYECTOS/BBDD%20Mantenimiento%20Red%20FO/Doc.Cliente/ADIF%20_%20Access
 
 #### Directorios:
 
 * En bbdd_fibraoptica/varios se encuentran las tansformaciones.
 
-* En bbdd_fibraoptica/varios/files_to_import se encuentran los ficheros .mdb (access):
+* En bbdd_fibraoptica/varios/files_to_import se encuentran los ficheros a importar (.mdb, .csv, .etc):
 
 * En bbdd_fibraoptica/varios/config_files se encuentran los ejemplos de ficheros de configuración:
 
